@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="cart.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <!-- Header (yours) -->
+    <header>
+      <a href="index.html" class="logo">
+        <h1>LOST & FOUND</h1><span>BYU</span>
+      </a>
+      <nav>
+        <a href="index.html">Find Lost Items</a>
+        <a href="reportitem.html">Report Lost Items</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main class="cart">
+      <section class="cart-hero">
+        <h1>Your Cart</h1>
+        <p>Review your items below. You can adjust quantities or remove items.</p>
+      </section>
+
+      <section class="cart-wrap">
+        <div class="cart-items" id="cartItems"></div>
+
+        <aside class="summary">
+          <h2>Order Summary</h2>
+          <dl>
+            <div><dt>Items</dt><dd id="sumCount">0</dd></div>
+            <div><dt>Subtotal</dt><dd id="sumSubtotal">$0.00</dd></div>
+          </dl>
+          <div class="summary-actions">
+            <a href="shop.html" class="ghost">Continue Shopping</a>
+            <button id="clearCart" class="link-danger">Clear Cart</button>
+            <button id="checkout" class="cta" disabled>Checkout</button>
+            <small>Checkout disabled for demo.</small>
+          </div>
+        </aside>
+      </section>
+
+      <p class="empty" id="emptyMsg">Your cart is empty. <a href="shop.html">Start shopping →</a></p>
+    </main>
+
+    <!-- Footer (yours) -->
+    <footer>
+      <p>
+        © 2025 - LostAndFound -
+        <a href="about.html">About</a> -
+        <a href="testimonials.html">Testimonials</a> -
+        <a href="locations.html">Locations</a>
+      </p>
+    </footer>
+
+    <script src="cart.js"></script>
+  </body>
+</html>

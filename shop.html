@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="shop.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <!-- Header (yours) -->
+    <header>
+      <a href="index.html" class="logo">
+        <h1>LOST & FOUND</h1><span>BYU</span>
+      </a>
+      <nav>
+        <a href="index.html">Find Lost Items</a>
+        <a href="reportitem.html">Report Lost Items</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main class="shop">
+      <!-- Hero banner -->
+      <section class="shop-hero">
+        <h1>Shop Lost Items</h1>
+        <p>Items that have been in the lost and found for over<br/>60 days are available for purchase.</p>
+        <a class="view-cart-link" href="cart.html">View Cart</a>
+      </section>
+
+      <!-- Product grid -->
+      <section class="grid" id="productGrid">
+        <!-- Item 1 -->
+        <article class="product-card"
+          data-id="notebook"
+          data-name="Notebook"
+          data-price="3.00"
+          data-image="images/shop-notebook.jpg"
+          data-desc="College-ruled spiral notebook found in the WSC. Light wear, no writing on first pages.">
+          <figure class="thumb">
+            <img src="images/shop-notebook.jpg" alt="Spiral notebook on Pink table"/>
+            <span class="quick">Quick View</span>
+          </figure>
+          <h3>Notebook</h3>
+          <div class="price">$3.00</div>
+        </article>
+
+        <!-- Item 2 -->
+        <article class="product-card"
+          data-id="mason-jar"
+          data-name="Mason Jar"
+          data-price="2.00"
+          data-image="images/shop-mason-jar.jpg"
+          data-desc="12 oz mason jar without lid. Turned in at the HBLL.">
+          <figure class="thumb">
+            <img src="images/shop-mason-jar.jpg" alt="Glass mason jar without lid"/>
+            <span class="quick">Quick View</span>
+          </figure>
+          <h3>Mason Jar</h3>
+          <div class="price">$2.00</div>
+        </article>
+
+        <!-- Item 3 -->
+        <article class="product-card"
+          data-id="jacket"
+          data-name="Jacket"
+          data-price="10.00"
+          data-image="images/shop-jacket.jpg"
+          data-desc="Lightweight jacket, size M. No visible damage.">
+          <figure class="thumb">
+            <img src="images/shop-jacket.jpg" alt="Brown lightweight jacket"/>
+            <span class="quick">Quick View</span>
+          </figure>
+          <h3>Jacket</h3>
+          <div class="price">$10.00</div>
+        </article>
+
+        <!-- Item 4 -->
+        <article class="product-card"
+          data-id="backpack"
+          data-name="Backpack"
+          data-price="12.00"
+          data-image="images/shop-backpack.jpg"
+          data-desc="Leather backpack with front pocket. Gently used.">
+          <figure class="thumb">
+            <img src="images/shop-backpack.jpg" alt="Leather backpack"/>
+            <span class="quick">Quick View</span>
+          </figure>
+          <h3>Backpack</h3>
+          <div class="price">$12.00</div>
+        </article>
+
+        <!-- Item 5 -->
+        <article class="product-card"
+          data-id="watch"
+          data-name="Watch"
+          data-price="25.00"
+          data-image="images/shop-watch.jpg"
+          data-desc="Fossil chronograph watch with brown leather band. Working battery.">
+          <figure class="thumb">
+            <img src="images/shop-watch.jpg" alt="Fossil watch with leather band"/>
+            <span class="quick">Quick View</span>
+          </figure>
+          <h3>Watch</h3>
+          <div class="price">$25.00</div>
+        </article>
+      </section>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="productModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+      <div class="overlay" data-close></div>
+      <div class="dialog">
+        <button class="close" aria-label="Close" data-close>&times;</button>
+        <div class="modal-body">
+          <img id="modalImg" alt="" />
+          <div class="details">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+            <div class="modal-price" id="modalPrice"></div>
+            <label class="qty">
+            Quantity
+            <select id="modalQty" aria-label="Quantity"></select>
+            </label>
+
+                <div class="actions">
+                <button id="addToCartBtn" class="cta">Add to Cart</button>
+                <button class="ghost keep-shopping" data-close>Keep Shopping</button>
+                <a class="link-cart" href="cart.html">Go to Cart</a>
+                </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer (yours) -->
+    <footer>
+      <p>
+        © 2025 - LostAndFound -
+        <a href="about.html">About</a> -
+        <a href="testimonials.html">Testimonials</a> -
+        <a href="locations.html">Locations</a>
+      </p>
+    </footer>
+
+    <script src="shop.js"></script>
+  </body>
+</html>

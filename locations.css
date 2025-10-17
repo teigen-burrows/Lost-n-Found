@@ -1,0 +1,105 @@
+/* =========================
+   Locations Page (scoped)
+   ========================= */
+
+main.locations {
+  background: #fff;
+  padding: clamp(16px, 4vw, 40px);
+}
+
+.locations h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(20px, 3.2vw, 36px);
+  margin-bottom: clamp(20px, 4vw, 36px);
+  color: #111;
+}
+
+/* Card grid */
+.locations .cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: clamp(14px, 2.4vw, 28px);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Card */
+.locations .card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image on top */
+.locations .thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Text area */
+.locations .info {
+  padding: 18px 18px 22px;
+}
+
+.locations .info h3 {
+  font-size: 20px;
+  color: #0b46a6;  /* BYU-ish blue */
+  margin-bottom: 6px;
+}
+
+.locations .info .dept {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.locations .info p {
+  line-height: 1.5;
+  color: #222;
+  margin: 2px 0;
+}
+
+.locations .info a {
+  color: #0b46a6;
+  text-decoration: none;
+}
+.locations .info a:hover {
+  text-decoration: underline;
+}
+/* Make the page breathe a bit more (higher specificity + !important) */
+main.locations {
+  padding: 48px clamp(40px, 8vw, 96px) !important;
+}
+
+/* Add space under the heading */
+.locations h2 {
+  margin-bottom: clamp(28px, 5vw, 56px) !important;
+}
+
+/* Slightly larger gaps + a little top margin before the cards */
+.locations .cards {
+  gap: clamp(18px, 3vw, 32px);
+  margin-top: 18px;
+}
+
+/* Blue banner */
+.campus-banner {
+  background: #0033a0;           /* BYU blue */
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  padding: 14px 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  margin: 8px auto 28px;          /* space above and below */
+  max-width: 1200px;              /* align with card grid width */
+}
+

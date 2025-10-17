@@ -1,0 +1,77 @@
+/* =============================
+   Testimonials Page (scoped)
+   ============================= */
+
+main.testimonials {
+  background: #e9e9e9;                 /* light grey canvas like your mockup */
+  padding-block: clamp(16px, 3vw, 32px);
+}
+
+/* Each alternating band */
+.testimonials .row {
+  max-width: 1400px;
+  margin: clamp(24px, 6vw, 72px) auto;
+  padding-inline: clamp(16px, 4vw, 64px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(16px, 3vw, 48px);
+  position: relative;
+}
+
+/* Image tile */
+.testimonials .image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;                /* consistent tall banners */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2px;
+}
+
+/* Quote card */
+.testimonials .quote-card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.12);
+  padding: clamp(18px, 4vw, 48px);
+}
+
+.testimonials .quote-card p {
+  font-size: clamp(18px, 3.4vw, 44px); /* big, readable quotes */
+  line-height: 1.35;
+  color: #111;
+}
+
+.testimonials .quote-card .author {
+  font-weight: 700;
+}
+
+/* Overlap the quote onto the image (like screenshots) */
+.testimonials .row.left .quote-card {
+  margin-left: -6vw;                   /* pull over the left image */
+  z-index: 2;
+}
+.testimonials .row.right .quote-card {
+  margin-right: -6vw;                  /* pull over the right image */
+  z-index: 2;
+  order: 1;
+}
+.testimonials .row.right .image {
+  order: 2;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+  .testimonials .row {
+    grid-template-columns: 1fr;        /* stack on mobile */
+  }
+  .testimonials .row.left .quote-card,
+  .testimonials .row.right .quote-card {
+    margin: 0;                         /* remove overlaps on small screens */
+  }
+  .testimonials .quote-card p {
+    font-size: clamp(18px, 5vw, 28px);
+  }
+}

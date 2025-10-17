@@ -1,0 +1,91 @@
+/* =========================
+   About Page (scoped styles)
+   ========================= */
+
+main.about {
+  /* keep header/footer styles from style.css */
+  background: #fff;                   /* white panels like your mockup */
+}
+
+/* Two split sections (About / Testimonials) */
+.about .split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;     /* text + image */
+  align-items: center;
+  gap: clamp(16px, 3vw, 40px);
+  min-height: min(72vh, 760px);       /* tall sections like screenshots */
+  padding-inline: clamp(16px, 3vw, 48px);
+  padding-block: clamp(24px, 5vw, 48px);
+}
+
+/* subtle divider between the two halves (like the blue border feel) */
+.about .split + .split {
+  border-top: 4px solid #0d2b5f12;    /* very light line */
+}
+
+/* Text block */
+.about .copy {
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.about .copy h2 {
+  color: #0b46a6;                      /* BYU blue vibe */
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  font-size: clamp(32px, 4vw, 56px);
+  margin-bottom: 16px;
+}
+
+.about .copy p {
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.8;
+  color: #1a1a1a;
+}
+
+.about .copy a {
+  color: #0b46a6;
+  text-underline-offset: 3px;
+}
+.about .copy a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Image block */
+.about .media {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;                  /* slight radius like a polished site */
+}
+
+.about .media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;                   /* fill the column like your mockup */
+  object-position: center;
+}
+
+/* Flip columns for the second section (image left, text right) */
+.about .reverse {                      /* keeps markup simple */
+  direction: rtl;
+}
+.about .reverse > * {
+  direction: ltr;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .about .split {
+    grid-template-columns: 1fr;        /* stack */
+    min-height: unset;
+  }
+
+  .about .media {
+    height: 42vh;                      /* give images presence on mobile */
+    max-height: 520px;
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Report Lost Item</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+          <h1>LOST & FOUND</h1>
+          <span>BYU</span>
+        </a>
+        <nav>
+          <a href="index.html">Find Lost Items</a>
+          <a href="reportitem.html" class="active">Report Lost Items</a>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+        </nav>
+      </header>
+      
+
+  <main class="report-container">
+    <div class="left-panel">
+      <h1>Found a<br>Lost Item?</h1>
+      <hr />
+      <p>
+        Enter information about the item,<br />
+        then please take the lost item to<br />
+        the nearest lost and found on campus.
+      </p>
+      <p class="contact">
+        For additional assistance, please<br />
+        call (801) 422-3024 or visit 1131 WSC.
+      </p>
+    </div>
+
+    <div class="form-panel">
+      <form>
+        <div class="form-row">
+          <input type="text" placeholder="Name of Item" required />
+          <input type="text" placeholder="Description" required />
+        </div>
+
+        <div class="form-row">
+          <input type="date" placeholder="Date Found" required />
+          <select required>
+            <option disabled selected>Category</option>
+            <option>Electronics</option>
+            <option>Clothing</option>
+            <option>Books</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <input type="text" placeholder="Building Found In" required />
+          <input type="text" placeholder="Lost and Found Location" required />
+        </div>
+
+        <div class="form-row">
+          <input type="url" placeholder="Image URL" />
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      © 2025 - LostAndFound -
+      <a href="about.html">About</a> -
+      <a href="testimonials.html">Testimonials</a> -
+      <a href="locations.html">Locations</a>
+    </p>
+  </footer>
+</body>
+</html>
